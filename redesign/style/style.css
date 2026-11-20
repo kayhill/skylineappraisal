@@ -52,13 +52,24 @@ nav {
 
 /* Splash */
 .splash {
-    background: url("../media/asheville_small.png") no-repeat center;
+    background: url("../media/asheville_small.jpg") no-repeat center;
     background-size: cover;
     height: 600px;
 }
 
-.splash h2 {
+/* The hero heading is the page's <h1> but keeps the original h2 size */
+.splash h1.hero-title {
+    font-size: 3.56rem;
+    line-height: 110%;
+    margin: 2.3733rem 0 1.424rem 0;
     font-weight: bold;
+}
+
+/* The quote page's <h1> keeps the original h4 size */
+h1.page-title {
+    font-size: 2.28rem;
+    line-height: 110%;
+    margin-top: 1.52rem;
 }
 
 .shadow {
@@ -184,7 +195,7 @@ nav {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .splash {
-        background: url("../media/asheville_large.png") no-repeat center;
+        background: url("../media/asheville_large.jpg") no-repeat center;
         background-size: cover;
     }
 
