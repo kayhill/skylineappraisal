@@ -58,9 +58,8 @@ nav {
 }
 
 .splash h2 {
-    font: 1.5em;
     font-weight: bold;
-};
+}
 
 .shadow {
     text-shadow: 1px 1px #001d3a;
@@ -111,7 +110,7 @@ nav {
     height: 300px;
 }
 
-#servicesDesc {
+.servicesDesc {
     font-size: 1.25em;
 }
 
@@ -120,6 +119,31 @@ nav {
 
 
 /*Contact*/
+
+/* Spam honeypot field: hidden from people, still visible to bots */
+.hidden-field {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Materialize hides the native <select>, which stops the browser from
+   showing its "please select an item" message for required selects.
+   Keep it rendered but invisible so validation works. */
+.select-wrapper select[required] {
+    display: block !important;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    pointer-events: none;
+}
 
 #contact {
     text-align: center;
@@ -171,7 +195,7 @@ nav {
         background-position-y: bottom;
     }
 
-    #servicesDesc {
+    .servicesDesc {
         font-size: 1.25em;
     }
    

@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="./media/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./media/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./media/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./media/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./media/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./media/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./media/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./media/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./media/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./media/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./media/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./media/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="./media/favicon/browserconfig.xml">
+    <meta name="msapplication-TileImage" content="./media/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
     <meta name="title" content="Reliable residential appraisal service in Asheville and Buncombe County.">
     <meta name="description" content="We provide affordable and accurate residential, property, fha, vacant land, and real estate appraisal services in Asheville and Buncombe County, North Carolina.">
@@ -12,7 +31,7 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./style/style.css">        
     <title>Get A Quote : Skyline Appraisal</title>
 </head>
@@ -36,13 +55,15 @@
             <p class="flow-text">Please include as much information as possible in your request. We look forward to working with you!</p>
             <p class="flow-text"><em> ** input is required.</em></p>
             <div class="container">
-            <form name="order" method="POST" netlify>
+            <form name="order" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="order">
+                <p class="hidden-field" aria-hidden="true"><label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
            
                 <input name="name" type="text" class="order-input" placeholder="Name**" required>   
-                <input name="email" type="text" class="order-input" placeholder="Email**" required>
-                <input name="phone" type="text" class="order-input" placeholder="Phone Number">
-                <select id="property-type" name="property" class="order-input">
-                  <option value="" disabled selected>Property Type</option>
+                <input name="email" type="email" class="order-input" placeholder="Email**" required>
+                <input name="phone" type="tel" class="order-input" placeholder="Phone Number">
+                <select id="property-type" name="property" class="order-input" required>
+                  <option value="" disabled selected>Property Type**</option>
                   <option  value="SFR">Single Family Residential</option>
                   <option value="condo">Condominium</option>
                   <option value="construction">Proposed Construction</option>
@@ -70,23 +91,22 @@
             <div class="col s12 m12 l7 offset-l1">
               <h5 class="title">CONTACT</h5>
               <ul class="footer-list">
-                <li><a class="grey-text text-lighten-3" target="_blank" href="tel: 1-513-222-4703"> <i class="material-icons">local_phone</i>    513-222-4703</a></li>
-                <li><a class="grey-text text-lighten-3" target="_blank" href="https://goo.gl/maps/a463wXR4L1ThozM68"><i class="material-icons">location_on</i>    102 Clarks Chapel Rd Weaverville, NC 28787</a></li>
-                <li><a class="grey-text text-lighten-3" target="_blank" href="mailto:skylineappraisal1@gmail.com"><i class="material-icons">local_post_office</i> skylineappraisal1@gmail.com</a></li>                
+                <li><a class="grey-text text-lighten-3" href="tel:+15132224703"> <i class="material-icons">local_phone</i>    513-222-4703</a></li>
+                <li><a class="grey-text text-lighten-3" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/a463wXR4L1ThozM68"><i class="material-icons">location_on</i>    102 Clarks Chapel Rd Weaverville, NC 28787</a></li>
+                <li><a class="grey-text text-lighten-3" href="mailto:skylineappraisal1@gmail.com"><i class="material-icons">local_post_office</i> skylineappraisal1@gmail.com</a></li>                
               </ul>
             </div>
-          </div>
         </div>
         <div class="footer-copyright center">
           <div class="container">
-          © 2020 Skyline Appraisal
-          <p>Website by <a href="https://kayhill.github.io/portfolio-page/" target="_blank">Kayliegh Hill</a></p>          
+          © <span id="copyright-year">2026</span> Skyline Appraisal
+          <p>Website by <a href="https://kayhill.github.io/portfolio-page/" target="_blank" rel="noopener noreferrer">Kayliegh Hill</a></p>          
           </div>
         </div>
       </footer>     
   
     <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="style/script.js"></script> 
     
 </body>
