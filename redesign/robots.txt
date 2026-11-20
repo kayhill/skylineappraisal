@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://skylineappraisalwnc.com/sitemap.xml
+Sitemap: https://www.skylineappraisalwnc.com/sitemap.xml
