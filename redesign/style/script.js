@@ -1,15 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems);
+    M.Sidenav.init(document.querySelectorAll('.sidenav'));
+    M.ScrollSpy.init(document.querySelectorAll('.scrollspy'));
+    M.FormSelect.init(document.querySelectorAll('select'));
 
-    var scrolls = document.querySelectorAll('.scrollspy');
-    var instances = M.ScrollSpy.init(scrolls);
-    
-    var elem = document.querySelector('.collapsible');
-    var instance = M.Collapsible.init(elem);
-
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems);
-
-  
-  });
+    var year = document.getElementById('copyright-year');
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
+});
